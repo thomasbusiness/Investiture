@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Programme – ConférenceTech</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container py-5">
+  <h2 class="mb-4 text-center">Programme de la journée</h2>
+
+  <!-- 🧭 Filtres -->
+  <div class="text-center mb-4">
+    <button class="btn btn-outline-primary me-2" onclick="filterProgram('all')">Tous</button>
+    <button class="btn btn-outline-primary me-2" onclick="filterProgram('UX')">UX</button>
+    <button class="btn btn-outline-primary me-2" onclick="filterProgram('Mobile')">Mobile</button>
+    <button class="btn btn-outline-primary" onclick="filterProgram('Salle A')">Salle A</button>
+  </div>
+
+  <!-- 📆 Cards programme -->
+  <div class="row" id="programList">
+    <!-- Les sessions seront injectées dynamiquement -->
+  </div>
+</div>
+
+<script src="assets/js/program.js"></script>
+</body>
+</html>

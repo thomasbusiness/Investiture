@@ -1,0 +1,120 @@
+/* Google Fonts à inclure dans le HTML :
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto&display=swap" rel="stylesheet">
+*/
+
+:root {
+  --rouge: #e63946;
+  --jaune: #f1c40f;
+  --vert: #2ecc71;
+  --bleu: #0d6efd;
+  --gris-clair: #f8f9fa;
+  --gris-foncé: #333;
+}
+
+/* 🌄 Fond dynamique + image */
+body {
+  background-color: #f1c40f;
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  background: linear-gradient(45deg, #f43105, #f4e805, #02a10f);
+  background-image: url('assets/img/IMG-20250807-WA0004.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: var(--gris-foncé);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+/* 🖋️ Typo & titres */
+h2 {
+  font-weight: 600;
+  color: var(--rouge);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+h4 {
+  color: var(--vert);
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* 📦 Sections */
+section {
+  padding: 4rem 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+/* 📜 Timeline */
+.timeline .row {
+  border-left: 3px solid var(--bleu);
+  padding-left: 2rem;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.timeline .row:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.timeline .row::before {
+  content: "";
+  position: absolute;
+  left: -9px;
+  top: 10px;
+  width: 16px;
+  height: 16px;
+  background-color: var(--bleu);
+  border-radius: 50%;
+}
+
+/* 🧭 Carte */
+iframe {
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+iframe:hover {
+  transform: scale(1.02);
+}
+
+/* 🪄 Animations AOS */
+[data-aos] {
+  transition-property: opacity, transform;
+  transition-duration: 0.8s;
+  transition-timing-function: ease-in-out;
+}
+
+/* 📦 Composants Bootstrap */
+.card-title {
+  font-weight: 600;
+}
+
+.badge {
+  font-size: 0.85rem;
+  background-color: var(--jaune);
+  color: #000;
+  padding: 0.4em 0.6em;
+  border-radius: 0.4em;
+}
+
+/* 🔚 Footer */
+footer {
+  background-color: var(--rouge);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+

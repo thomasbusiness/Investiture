@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galerie Média</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background-color: #f93310; }
+    .card-img-top { object-fit: cover; height: 200px; }
+    .ratio iframe { border-radius: 0.5rem; }
+  </style>
+</head>
+<body>
+
+  <!-- 🖼️ Carrousel -->
+  <section class="py-5 bg-dark text-white">
+    <div class="container">
+      <h2 class="mb-4 text-center">Carrousel d'images</h2>
+      <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="assets/img/Photo 1.jpg" class="d-block w-0,02px" alt="Photo 1">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/Photo 2.jpg" class="d-block w-100" alt="Photo 2">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/img/Photo 3.jpg" class="d-block w-100" alt="Photo 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 🧱 Masonry + Vidéos -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4 text-center">Grille Média</h2>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+
+        <!-- 📸 Image -->
+        <div class="col">
+          <div class="card h-100">
+            <img src="assets/img/IMG-20250807-WA0005.jpg" class="card-img-top" alt="Photo 4">
+            <div class="card-body">
+              <p class="card-text">Moment fort de la keynote.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🎥 YouTube -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vidéo keynote" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Replay de l’intervention UX.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 🎥 Vimeo -->
+        <div class="col">
+          <div class="card h-100">
+            <div class="ratio ratio-16x9">
+              <iframe src="https://player.vimeo.com/video/76979871" title="Vidéo atelier" allowfullscreen></iframe>
+            </div>
+            <div class="card-body">
+              <p class="card-text">Atelier Flutter en direct.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
